@@ -1,9 +1,9 @@
 package kz.edu.nu.cs.exercise;
 
 public class StateContext {
-    final State state1 = new State1(this);
-    final State state2 = new State2(this);
-    final State state3 = new State3(this);
+    public final State state1 = new State1(this);
+    public final State state2 = new State2(this);
+    public final State state3 = new State3(this);
 
     private State currentState;
 
@@ -14,17 +14,20 @@ public class StateContext {
     public void actionA() {
         // complete this method by
         // delegation to the current state
+        this.getCurrentState().actionA();
     }
 
     public void actionB() {
         // complete this method
         // delegate to the current state
+        this.getCurrentState().actionB();
     }
 
     public boolean inAcceptState() {
         // complete this method and return correct value
         // delegate to the current state
-        return false;
+        //return false;
+        return this.getCurrentState().isAccept();
     }
 
     public State getCurrentState() {

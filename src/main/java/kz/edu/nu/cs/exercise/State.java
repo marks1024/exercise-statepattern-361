@@ -4,6 +4,10 @@ public abstract class State {
     protected StateContext sc;
     protected boolean accept = false;
 
+    public State(StateContext StateContext) {
+        this.sc = StateContext;
+    }
+
     public void actionA() {
     }
 

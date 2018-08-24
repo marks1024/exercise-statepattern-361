@@ -20,8 +20,8 @@ public class StateContext {
     }
 
     public void actionB() {
-        // complete this method by
-        // delegation to the current state
+        // complete this method
+        // delegate to the current state
         this.getCurrentState().actionB();
 
     }

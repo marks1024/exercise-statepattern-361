@@ -14,17 +14,21 @@ public class StateContext {
     public void actionA() {
         // complete this method by
         // delegation to the current state
+    	
+    	this.currentState.actionA();
     }
 
     public void actionB() {
         // complete this method
         // delegate to the current state
+    	
+    	this.currentState.actionB();
     }
 
     public boolean inAcceptState() {
         // complete this method and return correct value
         // delegate to the current state
-        return false;
+        return this.currentState.isAccept();
     }
 
     public State getCurrentState() {
@@ -34,5 +38,4 @@ public class StateContext {
     public void setCurrentState(State currentState) {
         this.currentState = currentState;
     }
-
 }

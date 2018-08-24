@@ -1,15 +1,19 @@
 package kz.edu.nu.cs.exercise;
 
-public abstract class State {
+public class State2 extends State {
     protected StateContext sc;
     protected boolean accept = false;
 
-    public void actionA() {
+    public State2(StateContext val2){
+        sc = val2;
+    }
 
+    public void actionA() {
+        sc.setCurrentState(sc.state3);
     }
 
     public void actionB() {
-
+        sc.setCurrentState(sc.state1);
     }
 
     public boolean isAccept() {

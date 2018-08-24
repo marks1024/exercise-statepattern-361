@@ -1,9 +1,9 @@
 package kz.edu.nu.cs.exercise;
 
 public class StateContext {
-    final State state1 = new State1(this);
-    final State state2 = new State2(this);
-    final State state3 = new State3(this);
+    public final State state1 = new State1(this);
+    public final State state2 = new State2(this);
+    public final State state3 = new State3(this);
 
     private State currentState;
 

@@ -14,14 +14,40 @@ public class StateContext {
     public void actionA() {
         // complete this method by
         // delegation to the current state
+		
+		switch (this.currentState) {
+            case state1:  setCurrentState(state2);
+                     break;
+            case state2:  setCurrentState(state3);
+                     break;
+            case state3:  setCurrentState(state3);
+			
+            default: setCurrentState(state1);
+                     break;
+        }
+		
     }
 
     public void actionB() {
         // complete this method
         // delegate to the current state
+		
+		switch (this.currentState) {
+            case state1:  setCurrentState(state1);
+                     break;
+            case state2:  setCurrentState(state1);
+                     break;
+            case state3:  setCurrentState(state2);
+			
+            default: setCurrentState(state1);
+                     break;
+        }
     }
 
     public boolean inAcceptState() {
+		if(getCurrentState() == state3){
+			return true;
+		} else
         // complete this method and return correct value
         // delegate to the current state
         return false;

@@ -9,22 +9,26 @@ public class StateContext {
 
     public StateContext() {
         this.currentState = state1;
+        
     }
 
     public void actionA() {
         // complete this method by
         // delegation to the current state
+        getCurrentState().actionA();        
     }
 
     public void actionB() {
         // complete this method
         // delegate to the current state
+        getCurrentState().actionB();
     }
 
     public boolean inAcceptState() {
         // complete this method and return correct value
         // delegate to the current state
-        return false;
+        boolean acc = getCurrentState().isAccept();
+        return acc;
     }
 
     public State getCurrentState() {

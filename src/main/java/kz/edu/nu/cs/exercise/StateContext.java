@@ -12,19 +12,30 @@ public class StateContext {
     }
 
     public void actionA() {
-        // complete this method by
-        // delegation to the current state
+    	if (currentState == state1) {
+    		currentState = state2;
+    	} else if (currentState == state2) {
+    		currentState = state3;
+    	} else if (currentState == state3) {
+    		currentState = state3;
+    	} 
     }
 
     public void actionB() {
-        // complete this method
-        // delegate to the current state
+    	if (currentState == state1) {
+    		currentState = state1;
+    	} else if (currentState == state2) {
+    		currentState = state1;
+    	} else if (currentState == state3) {
+    		currentState = state2;
+    	} 
     }
 
     public boolean inAcceptState() {
-        // complete this method and return correct value
-        // delegate to the current state
-        return false;
+        if (currentState == state3)
+        	return true;
+        else 
+        	return false;
     }
 
     public State getCurrentState() {

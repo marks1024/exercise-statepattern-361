@@ -4,6 +4,12 @@ public class State3 extends State {
 	      this.sc = sc;
 	      this.accept = true;
 	}
+    public void actionA() {
+    	//loop here
+    }
 
-	
+    public void actionB() {
+    	// go to 2
+    	sc.setCurrentState(sc.state2); 
+    }
 }

@@ -4,4 +4,12 @@ public class State1 extends State {
 	      this.sc = sc;
 	      this.accept = false;
 	}
+	
+	public void actionA() {
+    	sc.setCurrentState(sc.state2); 
+    }
+
+    public void actionB() {
+    	// don't do anything: returns back
+    }
 }

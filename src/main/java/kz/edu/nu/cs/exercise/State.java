@@ -14,3 +14,4 @@ public abstract class State {
         return this.accept;
     }
 }
+

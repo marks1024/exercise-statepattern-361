@@ -39,7 +39,7 @@ public class TestStatePattern {
     @Test
     public void test_3() {
         sc.actionA();
-        assertTrue("Test Sequence: A (check state)", sc.getCurrentState().equals(sc.state2));
+        assertEquals("Test Sequence: A (check state)", sc.getCurrentState(), sc.state2);
     }
 
     /*
@@ -50,7 +50,7 @@ public class TestStatePattern {
         sc.actionA();
         sc.actionA();
         sc.actionB();
-        assertTrue("Test Sequence: AAB (check state)", sc.getCurrentState().equals(sc.state2));
+        assertEquals("Test Sequence: AAB (check state)", sc.getCurrentState(), sc.state2);
     }
 
     /*
@@ -62,7 +62,7 @@ public class TestStatePattern {
         sc.actionA();
         sc.actionB();
         sc.actionB();
-        assertTrue("Test Sequence: AABB (check state)", sc.getCurrentState().equals(sc.state1));
+        assertEquals("Test Sequence: AABB (check state)", sc.getCurrentState(), sc.state1);
     }
 
     /*

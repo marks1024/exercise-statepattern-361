@@ -14,16 +14,34 @@ public class StateContext {
     public void actionA() {
         // complete this method by
         // delegation to the current state
+        if(this.currentState == state1) {
+            this.currentState = state2;
+        } else if(this.currentState == state2) {
+            this.currentState = state3;
+        } else if(this.currentState == state3) {
+            this.currentState = state3;
+        }
     }
 
     public void actionB() {
         // complete this method
         // delegate to the current state
+        if(this.currentState == state1) {
+            this.currentState = state1;
+        } else if(this.currentState == state2) {
+            this.currentState = state1;
+        }
+        if(this.currentState == state3) {
+            this.currentState = state2;
+        }
     }
 
     public boolean inAcceptState() {
         // complete this method and return correct value
         // delegate to the current state
+        if((this.currentState == state3)){ 
+            return true;
+        }        
         return false;
     }
 

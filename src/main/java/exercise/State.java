@@ -1,16 +1,20 @@
-package kz.edu.nu.cs.exercise;
+package exercise;
 
 public abstract class State {
     protected StateContext sc;
     protected boolean accept = false;
 
-    public void actionA() {
+    public void actionA() 
+    {
     }
 
-    public void actionB() {
+    public void actionB() 
+    {
     }
 
-    public boolean isAccept() {
+    public boolean isAccept() 
+    {
         return this.accept;
     }
+    
 }

@@ -1,10 +1,9 @@
 package kz.edu.nu.cs.exercise;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class TestStatePattern {
 
@@ -14,7 +13,7 @@ public class TestStatePattern {
     public void setUp() {
         sc = new StateContext();
     }
-    
+
     /*
      * Test Sequence: A
      */
@@ -33,7 +32,7 @@ public class TestStatePattern {
         sc.actionA();
         assertTrue("Test Sequence AA", sc.inAcceptState());
     }
-    
+
     /*
      * Test Sequence: A (check state)
      */
@@ -42,7 +41,7 @@ public class TestStatePattern {
         sc.actionA();
         assertTrue("Test Sequence: A (check state)", sc.getCurrentState().equals(sc.state2));
     }
-    
+
     /*
      * Test Sequence: AAB (check state)
      */
@@ -53,7 +52,7 @@ public class TestStatePattern {
         sc.actionB();
         assertTrue("Test Sequence: AAB (check state)", sc.getCurrentState().equals(sc.state2));
     }
-    
+
     /*
      * Test Sequence: AABB (check state)
      */
@@ -65,7 +64,7 @@ public class TestStatePattern {
         sc.actionB();
         assertTrue("Test Sequence: AABB (check state)", sc.getCurrentState().equals(sc.state1));
     }
-    
+
     /*
      * Test Sequence: AAA
      */

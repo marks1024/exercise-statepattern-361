@@ -11,7 +11,7 @@ public class State3 extends State {
 	}
 
 	public void actionB() {
-		sc.setCurrentState(sc.state2);
+		sc.setCurrentState(sc.state1);
 	}
 
 }

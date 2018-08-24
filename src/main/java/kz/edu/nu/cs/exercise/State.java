@@ -5,6 +5,7 @@ public abstract class State {
     protected boolean accept = false;
 
     public void actionA() {
+    	
     }
 
     public void actionB() {

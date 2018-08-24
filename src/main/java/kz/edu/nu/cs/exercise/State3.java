@@ -18,4 +18,5 @@ public class State3 extends State{
     public boolean isAccept() {
         return this.accept;
     }
+    
 }

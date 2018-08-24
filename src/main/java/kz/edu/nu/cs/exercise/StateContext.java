@@ -26,7 +26,7 @@ public class StateContext {
     public boolean inAcceptState() {
         // complete this method and return correct value
         // delegate to the current state
-        return false;
+        return currentState.isAccept();
     }
 
     public State getCurrentState() {

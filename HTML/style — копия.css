@@ -1,0 +1,38 @@
+body{
+	background-image:  url("../images/doodles.png");
+}
+
+#wrapper{
+	width: 800px;
+	margin: 20px auto;
+}
+
+header>h1 {
+	text-align: center;
+}
+
+header{
+	width: 400px;
+	margin: 0px auto;
+	background-color: rgba(0, 0, 0, 2);
+	border-radius: 20px;
+}
+
+#controls{
+	width: 600px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+#controls > input {
+	width: 200px;
+	height: 25px;
+}
+
+#controls > button {
+	width: 200px;
+	height: 25px;
+}
+
+
+

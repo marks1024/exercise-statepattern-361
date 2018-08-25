@@ -1,0 +1,147 @@
+BODY
+{
+    BACKGROUND-COLOR: #ffffff;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    MARGIN: 0px;
+    FONT-HEIGHT: 120%
+}
+.menu
+{
+    BACKGROUND-COLOR: #ccccff;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal
+}
+A:link
+{
+    COLOR: darkblue;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    COLOR: mediumblue;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    COLOR: darkblue;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+A:active
+{
+    COLOR: darkblue;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+TD
+{
+    FONT-FAMILY: Tahoma, Verdana, sans-serif, Arial, Helvetica;
+    FONT-SIZE: 11px
+}
+.smallText
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt
+}
+SELECT
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px
+}
+.header
+{
+    BACKGROUND-COLOR: #ccccff;
+    COLOR: #000066;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 13px;
+    FONT-STYLE: italic;
+    FONT-WEIGHT: bold;
+    PADDING-BOTTOM: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-RIGHT: 2px;
+    PADDING-TOP: 2px
+}
+.sample
+{
+    COLOR: silver;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold
+}
+H3
+{
+    FONT-SIZE: 14px
+}
+.rightborder
+{
+    BORDER: black 0px dotted;
+}
+.common
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9pt
+}
+.txtControls
+{
+    BACKGROUND-COLOR: #eeeeee;
+    BORDER: 1px inset;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9pt
+}
+input
+{
+    BORDER: 1px inset;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9pt
+}
+.valid
+{
+    BACKGROUND-COLOR: #eeeeee;
+}
+.invalid
+{
+    BACKGROUND-COLOR: #fa0;
+}
+SELECT
+{
+    BACKGROUND-COLOR: #eeeeee;
+    BORDER: #dedede 1px inset;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9pt
+}
+.btnControls
+{
+    BORDER	: #dcdcdc 1px outset;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt
+}
+.black
+{
+    BACKGROUND-COLOR: #000000;
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial, Tahoma 
+}
+.payHeader
+{
+    BACKGROUND-COLOR: #bbbbbb;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: xx-small;
+    FONT-WEIGHT: bold
+}
+.payText
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: xx-small
+}
+.small
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt
+}

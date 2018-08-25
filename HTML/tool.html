@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo List</title>
+</head>
+<body>
+	<div id = "wrapper">
+		
+		<header>
+			<h1>My super duper ToDo List</h1>
+		</header>
+		<div id="controls">
+			<input type="text" placeholder="Enter your ToDo" />
+			</br>
+			<button class="myButton">Add</button>
+		</div>
+
+		<div id="todos">
+
+			<div id="1" class="todo-box">
+				<input type="checkbox"/>
+				<p class="todo-text">First ToDo</p>
+			</div>
+
+			<div id="2" class="todo-box">
+				<input type="checkbox"/>
+				<p class="todo-text">Second ToDo</p>
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+	<script>
+		document.getElementaryId("ad_button").addEventListener("click",
+			function(){
+				alert(document.getElementById("to-do-text").value)
+			});
+	</script>
+
+</body>
+</html>

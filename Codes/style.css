@@ -1,0 +1,95 @@
+* {
+	margin: 0px;
+	padding: 0px;
+/*    background-image: url(https://www.photocase.com/photos/1560454-green-red-yellow-natural-healthy-food-orange-fresh-photocase-stock-photo-large.jpeg);*/
+}
+html{
+    background: url(https://www.photocase.com/photos/1560454-green-red-yellow-natural-healthy-food-orange-fresh-photocase-stock-photo-large.jpeg);
+    background-size:cover;
+}
+/*
+
+body.login {
+height:100%;
+background:transparent url("https://www.photocase.com/photos/1560454-green-red-yellow-natural-healthy-food-orange-fresh-photocase-stock-photo-large.jpeg") no-repeat center center fixed;
+background-size:cover;
+}
+*/
+
+body {
+	font-size: 120%;
+    font-family: Avenir Next;
+/*	background: #F8F8FF;*/
+}
+
+p{
+    color: rgb(255, 220, 212);
+}
+.header {
+	width: 30%;
+	margin: 50px auto 0px;
+	color:rgb(164, 177, 202);
+	background-color: rgb(16, 32, 55);
+    opacity: 0.7;
+	text-align: center;
+	border: 1px solid #154b89;
+	border-bottom: none;
+	border-radius: 10px 10px 0px 0px;
+	padding: 20px;
+    font-family: Avenir Next;
+}
+form, .content {
+	width: 30%;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #36484b;
+    opacity: 0.7;
+    background-color: rgb(16, 32, 55);
+	border-radius: 0px 0px 10px 10px;
+    vertical-align: middle;
+    
+}
+.input-group {
+	margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+    color: rgb(255, 220, 212);
+	display: block;
+	text-align: left;
+	margin: 3px;
+    font-family: Avenir Next;
+}
+.input-group input {
+	height: 30px;
+	width: 93%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+.btn {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #5F9EA0;
+	border: none;
+	border-radius: 5px;
+}
+.error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color:darkred; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+.success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
+}
+

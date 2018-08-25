@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Professional search bar</title>
+        <link rel = "stylesheet" href = "css/styleBar.css"/>
+        <script type = "text/javascript">
+            function active(){
+                var searchBar = document.getElementById('searchBar');
+                
+                if(searchBar.value == 'Search...'){
+                    searchBar.value = ''
+                    searchBar.placeholder = 'Search...'
+                }
+            }
+            
+             function inactive(){
+                var searchBar = document.getElementById('searchBar');
+                
+                if(searchBar.value == ''){
+                    searchBar.value = 'Search...'
+                    searchBar.placeholder = 'Search...'
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="search.php" method="post" >
+            <input type = "text" id="searchBar"  placeholder ="" value="Search..." maxlength="25" autocomplete="off" onMouseDown="active();" onBlur="inactive();"/><input type="submit" id="searchBtn" value="Go!"/>
+        </form>
+    </body>
+</html>

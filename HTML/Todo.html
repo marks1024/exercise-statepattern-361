@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo List</title>
+</head>
+<body>
+		<div id = "wrapper">
+		
+		<header>
+			<h1>My super duper ToDo List</h1>
+		</header>
+		<div id="controls">
+			<input id="todo-text-input" type="text" placeholder="Enter your ToDo" />
+			<br>
+			<button class="myButton" id="add_button">Add</button>
+		</div>
+
+		<div id="todos">
+
+			<div id="1" class="todo-box">
+				
+				<p id="someid" class="todo-text"> 
+					<input  type="checkbox"/> 
+					First ToDo
+				</p>
+			</div>
+
+			<div id="2" class="todo-box">
+				
+				<p class="todo-text"> 
+					<input type="checkbox"/>
+					Second ToDo
+				</p>
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+	<script>
+		
+		var current_id = 3;
+
+		document.getElementById("add_button").addEventListener("click", function(){
+			var todoText = document.getElementById("todo-text-input").value;
+			var todoDiv = document.getElementById("todos");
+
+			var newDiv = document.createElement("div");
+			var p = document.createElement("p");
+			var input = document.createElement("input");
+
+			input.type = "checkbox";
+			p.appendChild(input);
+			p.innerHTML+= todoText;
+			p.class="todo-text";
+			newDiv.appendChild(p);
+			newDiv.id=current_id;
+			current_id++;
+			newDiv.class="todo-box";
+
+			todoDiv.appendChild(newDiv);
+		});
+
+	</script>
+
+</body>
+</html>

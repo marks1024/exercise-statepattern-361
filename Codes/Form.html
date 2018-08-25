@@ -1,0 +1,448 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <body>
+    
+
+
+<form action = "index.php" method = "post">
+Name = <input type = "text" name = "name"><br>
+E-mail: <input type = "text" name = "email"><br>
+<input type = "submit">
+</form>
+
+        </body>
+
+</html>-->
+
+
+<!--
+<!DOCTYPE HTML>  
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>  
+
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed"; 
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
+  }
+    
+  if (empty($_POST["website"])) {
+    $website = "";
+  } else {
+    $website = test_input($_POST["website"]);
+    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+      $websiteErr = "Invalid URL"; 
+    }
+  }
+
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+
+  if (empty($_POST["gender"])) {
+    $genderErr = "Gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<h2>PHP Form Validation Example</h2>
+<p><span class="error">* required field.</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Name: <input type="text" name="name" value="<?php echo $name;?>">
+  <span class="error">* <?php echo $nameErr;?></span>
+  <br><br>
+  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+  <span class="error">* <?php echo $emailErr;?></span>
+  <br><br>
+  Website: <input type="text" name="website" value="<?php echo $website;?>">
+  <span class="error"><?php echo $websiteErr;?></span>
+  <br><br>
+  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+  <br><br>
+  Gender:
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+  <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
+
+    </body>
+</html>
+-->
+<!--
+
+
+</body>
+</html>
+-->
+
+<!DOCTYPE>
+<html>
+    <body>
+        <h1>Welcome to my page!</h1>
+        <p>Feel free to ask any questions.</p>
+        <?php include 'index.php';?>
+    </body>
+</html>
+
+        
+           $myfile = fopen("newfile.txt", "w");
+           $txt = "Dana and Zhuldyz";
+           fwrite($myfile, $txt);
+            fclose($myfile);
+       $myfile = fopen("newfile.txt", "a");
+        $txt = "Dana and Zhuldyz";
+          fwrite($myfile, $txt);
+          //echo fgets($myfile);
+          fclose($myfile);
+
+<?php
+$con = new mysqli("127.0.0.1", "root", "23112017cp", "mydb");
+if ($con->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT DishID FROM DISH";
+//$result = $con->query("SELECT * FROM AIRPLANE")->fetch_object()->ID;
+$result = $con->query($sql);
+    
+if($result->num_rows > 0){
+    while($row = $result->fetch_assoc()){
+        echo "DishID: ".$row["DishID"];
+    }
+}else{
+    echo "0 results";
+}
+$con->close();
+echo "$ID <br/>";
+echo "Why?!<br/>";
+echo "Hello From Sites Folder!";
+phpinfo();
+?>
+
+
+<?php 
+$servername = "127.0.0.1";
+$username = "root";
+$password = "23112017cp";
+$dbname = "mydb";
+
+// json response array
+//$response = array("error" => FALSE);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+$response["DISH"] = array();
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$counter=0;
+$sql = "SELECT * FROM DISH";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $DISH = array();
+        $DISH["Name"] = $row["Name"];
+        $DISH["Portion"] = $row["Portion"];
+        $DISH["Price"] = $row["Price"];
+        $DISH["Description"] = $row["Description"];
+        $DISH["DishID"] = $row["DishID"];
+        array_push($response["DISH"], $DISH);
+    }
+    // success
+    $response["success"] = 1;
+ 
+    // echoing JSON response
+    echo json_encode($response);
+}
+else {
+    // no products found
+    $response["success"] = 0;
+    $response["message"] = "No products found";
+ 
+    // echo no users JSON
+    echo json_encode($response);
+}
+?>
+
+<?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "23112017cp";
+$dbname = "mydb";
+
+//$servername = "localhost";
+//$username = "id3510574_dana_zhumabekova";
+//$password = "23112017cp";
+//$dbname = "id3510574_canteen";
+
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+$response["DISH"] = array();
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+//echo "Connected successfully";
+
+
+$sql = "SELECT * FROM DISH";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    $resultArray = array();
+	
+    
+    while($row = mysqli_fetch_assoc($result)) {
+        
+        $DISH = array();
+        $DISH["Name"] = $row["Name"];
+        $DISH["Portion"] = $row["Portion"];
+        $DISH["Price"] = $row["Price"];
+        $DISH["Description"] = $row["Description"];
+        $DISH["DishID"] = $row["DishID"];
+        array_push($response["DISH"], $DISH);
+//       
+//        $tempArray = array();
+//        $tempArray = $row["Name"];
+//        $tempArray = $row["Portion"];
+//        $tempArray = $row["Price"];
+//        $tempArray = $row["Description"];
+//        $tempArray = $row["DishID"];
+//        array_push($resultArray, $tempArray);
+    }
+    
+    
+    echo json_encode($response["DISH"]);
+    
+} else {
+    echo "0 results";
+}
+
+mysqli_close($conn);
+?>
+
+<?php 
+$servername = "127.0.0.1";
+$username = "root";
+$password = "23112017cp";
+$dbname = "mydb";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    header('Location: http://localhost');
+    die();
+} 
+else if (!isset($_POST['Name']) || !isset($_POST['Portion']) || !isset($_POST['Price']) || !isset($_POST['Description']) || !isset($_POST['DishID']) || $_POST['Name']=='' || $_POST['Portion']=='' || $_POST['Price']=='' || $_POST['Description']=='' || $_POST['DishID']==''){
+    header('Location: http://localhost');
+    die();
+}
+
+$counter=0;
+$Name=$_POST['Name'];
+$Portion=$_POST['Portion'];
+$Price=$_POST['Price'];
+$Description=$_POST['Description'];
+$DishID=$_POST['DishID'];
+
+$sql = "INSERT INTO list (`Name`, `Portion`,`Price`,`Description`, 'DishID') VALUES ('$name', '$surname','$position','$age')";
+
+if ($result=$conn->query($sql)) {
+    header('Location: http://localhost');
+    die();
+} else {
+    header('Location: http://localhost');
+    die();
+}
+$conn->close();
+?>
+
+<?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "23112017cp";
+$dbname = "mydb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+
+    $response["USER"] = array();
+$sql = "SELECT * FROM USER";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    $resultArray = array();
+	
+    
+    while($row = mysqli_fetch_assoc($result)) {
+        
+        $DISH = array();
+        $DISH["Email"] = $row["Email"];
+        $DISH["AdministratorFlag"] = $row["AdministratorFlag"];
+        $DISH["ClientFlag"] = $row["ClientFlag"];
+        $DISH["FName"] = $row["FName"];
+        $DISH["LName"] = $row["LName"];
+        $DISH["Password"] = $row["Password"];
+        array_push($response["USER"], $DISH);
+
+    }
+    
+    
+    echo json_encode($response["USER"]);
+    
+} else {
+    echo "0 results";
+}
+mysqli_close($conn);
+?>
+
+
+$result = mysqli_query($conn, $sql);
+
+if ($result=$conn->query($sql)) {
+    header('Location: http://localhost');
+    die();
+} else {
+    header('Location: http://localhost');
+    die();
+}
+    
+while($row = mysql_fetch_object($result)){    
+ 
+   echo "<tr>";
+       echo "<td>";  
+         echo $row->Email;
+       echo "</td>"; 
+        echo "<td>";  
+           echo $row->AdministratorFlag;
+         echo "</td>";  
+        echo "<td>";
+           echo $row->ClientFlag;  
+         echo "</td>";  
+        echo "<td>";
+            echo $row->FName; 
+         echo "</td>";  
+        echo "<td>";
+             echo $row->LName;  
+         echo "</td>";  
+        echo "<td>"; 
+             echo $row->Password;  
+        echo "</td>";  
+        
+        echo "</tr>"; 
+
+<a href="server.php?del=<?php echo $row['DishID']; ?>" class="del_btn">Delete</a>
+
+
+<?php 
+    session_start();
+
+    if(!isset($_SESSION['Email'])){
+        $_SESSION['msg'] = "You must log in first";
+        header('location: login.php');
+    }
+
+    if(isset($_GET['logout'])){
+        session_destroy();
+        unset($_SESSION['Email']);
+        header('location: login.php');   
+    }
+    ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel = "stylesheet" type ="text/css" href="style.css">
+    </head>
+        <body>
+            <div class="header">
+                <h2>Home Page</h2>
+            </div>
+            <div class = "content">
+                <?php if(isset($_SESSION['success'])): ?>
+                    <div class="error success">
+                        <h3>
+                            <?php
+                                echo $_SESSION['success'];
+                                unset($_SESSION['success']);
+                            
+                            ?>
+                        </h3>
+                    </div>
+                <?php endif ?>
+                
+                <?php if(isset($_SESSION['Email'])): ?>
+                    <p>Welcome <strong><?php echo $_SESSION['Email'];?></strong></p>
+                    <p><a href="index.php?logout='1" style = "color: red;">Logout</a></p>
+                <?php endif ?>
+            </div>
+                               
+                               
+        </body>
+                               
+</html>  

@@ -1,0 +1,55 @@
+h1{
+    color: #00FFOO;
+    color: rgb(255, 100, 0);
+    color: rgba(255, 100, 0, 1);
+    // 0 - opaque, 1 - 
+    /*"0-255"*/
+    /*#RRGGBB8*/
+}
+
+div #main{
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1{
+    color: #222;
+}
+
+header{
+    background-color: #999;
+}
+
+.clear{
+    clear: both;
+}
+
+div#main_content {
+    float: left;
+    width: 88%;
+}
+
+div#content {
+    float: left;
+    width: 20%;
+}
+
+img{
+    width: 100%;
+}
+
+footer{
+    background color: #888
+}
+
+footer>span: nth-child(1){
+    float: right;
+}
+
+footer>span: nth-child(2){
+    float: left;
+}
+
+p.nth-child(2n){
+    color: #888;
+}

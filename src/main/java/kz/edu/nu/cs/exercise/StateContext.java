@@ -14,17 +14,37 @@ public class StateContext {
     public void actionA() {
         // complete this method by
         // delegation to the current state
+    	if (this.getCurrentState().equals(state1)) {
+    		setCurrentState(state2);
+//    		System.out.println("The state is 2 now");
+    	} else {
+    		setCurrentState(state3);
+//    		System.out.println("The state is 3 now");
+    	}
+    	
     }
 
     public void actionB() {
         // complete this method
         // delegate to the current state
+    	if (this.getCurrentState().equals(state3)) {
+    		setCurrentState(state2);
+//    		System.out.println("The state is 2 now");
+    	} else {
+    		setCurrentState(state1);
+//    		System.out.println("The state is 1 now");
+    	}
+
     }
 
     public boolean inAcceptState() {
         // complete this method and return correct value
         // delegate to the current state
-        return false;
+    	if (this.getCurrentState().equals(state3)) {
+    		return true;
+    	} else {
+    		return false;
+    	}	
     }
 
     public State getCurrentState() {
